@@ -1,0 +1,47 @@
+extends layout
+block layout-content 
+    div.mb-4.mt-4.container.heroImagePlaces
+        //img(src=`/images/heroImage2.jpg` class="img-fluid ")
+        //img(src=`${countryData[0].flags.png}` class="img-fluid   opacity-25" )
+        //img(src=`${places[0].photo}` class="img-fluid w-100  opacity-25")
+        div.heroTextPlaces.position-relative.top-50.start-50.translate-middle
+            div.d-flex.flex-row.gap-5.text-center.justify-content-center.align-items-center
+                h1.text-center.display-1.fw-bold #{countryData[0].name.common}
+                div.container.flag
+                    img(src=`${countryData[0].flags.png}` class="img-fluid" height="100" alt="country Flag Image" aria-hidden="true")
+            //div.position-absolute.bottom-0.start-0.translate-middle Population: #{countryData[0].population}
+    div.container.mt-5.mb-5 
+        div.row.gap-5.justify-content-center
+            div.card.col-md-3.col-12.border-0.text-center.bg-secondary-subtle.p-4.countryInfo
+                i(class="fa-solid fa-flag  fa-2x mb-2")
+                h5.card-title Population 
+                p.card-text   #{countryData[0].population}
+            div.card.col-md-3.col-12.border-0.text-center.bg-secondary-subtle.p-4.countryInfo
+                i(class="fa-solid fa-city   fa-2x mb-2")
+                h5.card-title Capital
+                p.card-text   #{countryData[0].capital[0]}
+            div.card.col-md-3.col-12.border-0.text-center.bg-secondary-subtle.p-4.countryInfo
+                i(class="fa-solid mb-2 fa-location-dot  fa-2x ")
+                h5.card-title Continent
+                p.card-text   #{countryData[0].continents[0]}
+    if places.length > 0
+        h3.text-center.display-6.mb-5 Tourist attractions in #{countryData[0].name.common}
+        div.container
+            ul.row.row-cols-1.row-cols-md-3.g-5.touristPlaces
+                each place in places
+                    li.col
+                        a(href=`/placeDetails/placeId=${place.place.place_id}` class="card-link")
+                            div.card.rounded-3.places.border-0 
+                                img(src=`${place.photo}` class="custom-rounded-2 card-img-top "  alt="Tourist attraction" aria-hidden="true")
+                                div.card-body
+                                    div.fs-5.fw-light.text-start.card-title
+                                        h5.fw-normal  #{place.place.name} 
+                                    if place.place.rating
+                                        div.container
+                                            p.row.justify-content-between #{place.place.rating}
+                                                    span.col 
+                                                        i(class="fa-solid fa-star text-warning")
+                                                    span.col.text-secondary #{place.place.user_ratings_total} Reviews
+                                    //a(href=`/placeDetails/placeId=${place.place.place_id}` class="  card-text"  ) View Details
+    else
+        h3.text-center.display-6.mb-5  No Tourist attractions in #{countryData[0].name.common} 

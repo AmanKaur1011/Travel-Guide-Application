@@ -1,0 +1,58 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title #{title} | Travel Guide
+        link(href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous")
+        link(href="/css/index.css" rel="stylesheet")
+    body
+        header#header
+            div.container
+                div(class="d-flex pt-4 justify-content-between")
+                    h2 TravelGuide
+                    div
+                        ul.d-flex.flex-row.gap-5.nav 
+                            li
+                                a(href="" class=" fs-5 fw-normal text-secondary-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover") Home 
+                            li
+                                a(href="" class=" fs-5  fw-normal text-secondary-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover") About
+                            li
+                                a(href="" class=" fs-5  fw-normal  text-secondary-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover") Contact
+        main#main
+            block layout-content
+        footer.bg-secondary-subtle.rounded-3.pt-4.px-3.pb-3.mb-3.mx-3.mt-5(id="footer")
+            h6.text-center.mb-2.fs-6 Download our App from
+            div.row.justify-content-center.gap-2.pt-1
+                div.text-center.col-auto.border.border-secondary.rounded-2.py-1.px-2 
+                    i(class="fa-brands fa-lg fa-google-play") 
+                    span 
+                        a(href="https://play.google.com/store/apps?hl=en"  class="text-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover") Google Play
+                div.text-center.col-auto.border.border-secondary.rounded-2.py-1.px-2 
+                    i(class="fa-brands fa-lg  fa-apple")
+                    span  
+                        a(href="https://www.apple.com/ca/store?afid=p238%7CsP3DU5IXU-dc_mtid_1870765e38482_pcrid_703404489802_pgrid_165151408689_pntwk_g_pchan__pexid__ptid_kwd-12522920_&cid=aos-us-kwgo---slid---product-" class="text-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover") Apple store 
+            div.d-flex.pt-3
+                div.flex-grow-1
+                div.conatiner
+                    div.row.gap-5 
+                        div.col 
+                            p.footerp WHY US
+                            ul.footerList.ps-0.d-flex.flex-column.gap-2
+                                li 
+                                    a(href="#" class=" text-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover") Why we are different
+                                li 
+                                    a(href="#" class="text-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover") Our security and trust
+                                li 
+                                    a(href="#" class="text-secondary  link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover") Our technology
+                        div.col 
+                            p.footerp ABOUT US 
+                            ul.footerList.ps-0.d-flex.flex-column.gap-2  
+                                li 
+                                    a(href="#" class="text-secondary  link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover") About us
+                                li 
+                                    a(href="#" class=" text-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover") Help and Support
+                                li 
+                                    a(href="#" class="text-secondary  link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover") Terms and conditions 
+            p.text-secondary(id="copyright") &copy; Copyright HTTP5211, 2022.
+            script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous")
+            script(src="https://kit.fontawesome.com/db1e295bdd.js" crossorigin="anonymous")

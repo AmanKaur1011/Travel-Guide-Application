@@ -1,0 +1,35 @@
+extends layout
+block layout-content
+    div.content.bg-secondary-subtle.m-3.rounded-3 
+        h1.fw-bold.display-3.text-center.mt-5.mb-3.pt-4 #{place.data.result.name}
+        div.mb-5.text-center 
+            a(class="fs-5 link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href=`${place.data.result.website}` id="visitWebsiteLink") Visit the Website                                            
+                i(class="fa-solid fa-arrow-right")
+        div.d-flex.flex-wrap.mx-4
+            div.d-flex.flex-column.gap-3.pt-5.col-12.col-lg-6
+                div 
+                    if place.data.result.editorial_summary && place.data.result.editorial_summary.overview
+                        span.fw-bold Overview: 
+                        span #{place.data.result.editorial_summary.overview} 
+                div 
+                    span.fw-bold Address: 
+                    span #{place.data.result.formatted_address}
+                div 
+                    span.fw-bold Rating: 
+                    span #{place.data.result.rating}
+                    span 
+                        i(class="fa-solid fa-star text-warning")
+                div 
+                    button( onclick=`window.location.href='${place.data.result.url}'` class="btn " id="googleMapsbtn") View on Google Maps
+            div.col-12.col-lg-6
+                div(class="carousel slide" id="carouselExample" data-bs-ride="carousel")
+                    div.carousel-inner.rounded-4.text-center(class="carousel")
+                        each photo, index in place.photoDataArray
+                            div.carousel-item(class= index === 0 ? 'active' : '')
+                                img(src= `${photo}` class=" img-fluid rounded-4 shadow-lg" alt="Tourist place image" aria-hidden="true" )
+                    button(class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev")
+                        span(class="carousel-control-prev-icon bg-success rounded " aria-hidden="true" )
+                        span(class="visually-hidden") Previous
+                    button(class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next")
+                        span(class="carousel-control-next-icon bg-success rounded " aria-hidden="true")
+                        span(class="visually-hidden") Next

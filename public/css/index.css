@@ -1,0 +1,190 @@
+/* Importing the Google font- Poppins  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    font-family: 'Poppins';
+}
+#heroTitle {
+  color: rgb(58, 42, 42);
+}
+.nav {
+  list-style: none;
+}
+
+#heroContext {
+  height: 600px;
+  background-image: url("/images/heroImage3.jpg");
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.link-underline:hover {
+  text-decoration-color: #2a9d8f !important;
+}
+#SearchButton {
+  background-color: #2a9d8f;
+  color: white;
+}
+.countriesList {
+  list-style: none;
+}
+.countries {
+  text-decoration: none;
+  color : rgb(34, 34, 34);
+}
+.restApiCountries{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+.restApiCountries:hover{
+  transform: scale(1.05); /* Slightly expand the card */
+}
+.countryName{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+#images {
+  width: 100%;  /* Ensures the image covers the entire width of the card */
+  height: 200px;  /* Fixed height for consistent card sizes */
+  object-fit: cover;  /* Maintains aspect ratio while covering the container */
+}
+
+.about{
+  background-color: #2a9d8f;
+  color:#eff7f6;
+  padding:30px 45px 30px 45px;
+  border-radius:20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.about p:first-of-type {
+  color:#f8e16c; /* Example style for the first <p> tag */ 
+}
+.aboutp{
+  font-size:14px;
+}
+.aboutImage1{
+  width:auto;
+   height: 300px;
+    object-fit:cover;
+}
+.aboutp1{
+  color: #2a9d8f;
+}
+#CountryButton{
+  background-color: #2a9d8f;
+  color:white;
+}
+.countryButton .btn{
+cursor:default;
+}
+.icon-wrapper {
+  position: relative; /* Establish a positioning context */
+}
+.icon-wrapper i {
+  position: absolute;
+  top: -10px; /* Adjust as needed */
+  left: 67%;
+  transform: translateX(-50%); /* Center the icon horizontally */
+  z-index: 7; /* Ensure the icon is above the .about div */
+}
+/*------------------------Styling for the attraction Page---------------------------------- */
+.card-img-top {
+  width: 100%;  /* Ensures the image covers the entire width of the card */
+  height: 200px;  /* Fixed height for consistent card sizes */
+  object-fit: cover;  /* Maintains aspect ratio while covering the container */
+  padding: 7px;
+}
+.custom-rounded-2 {
+  border-radius: 0.8em; /* Custom border radius equivalent to Bootstrap's rounded-2 class */
+}
+.touristPlaces {
+  list-style: none;
+}
+.places{
+  height:300px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.countryInfo{
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.places{
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+.places:hover{
+  transform: scale(1.05); /* Slightly expand the card */
+}
+.card-link {
+  text-decoration: none; /* Remove underline from the link */
+  color: inherit; /* Inherit text color */
+  display: block; /* Make the link block-level */
+  
+}
+.buttonContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#viewMoreButton{
+    background-color: #2a9d8f;
+    color: white; /* Custom text color */
+    padding: 10px 20px; /* Padding for button size */
+    border-radius: 10px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+/*-----------------------------------styling for the placeDetail Page----------------------------------- */
+.carousel{   
+   height:500px;
+}
+.carousel-item img{
+  max-height:400px;
+ object-fit: cover;
+}
+.heroImagePlaces{
+  height: 300px;
+  border-radius: 35px;
+  background-image: url("/images/heroImage3.jpg");
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat;
+  opacity: 75%;
+}
+.heroTextPlaces{
+   color:white
+}
+.flag{
+    width:200px;
+    height:100px;
+    margin:0;
+}
+.flag .img-fluid{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+#loadMore{
+background-color:#2a9d8f;
+color:white;
+}
+#copyright{
+  font-size: 12px;
+  padding:0;
+  margin:0;
+}
+.footerList{
+  font-size: 12px;
+  list-style: none;
+}
+.footerp{
+  font-size: 12px;
+  font-weight: bold;
+}
+#googleMapsbtn{
+  background-color :#2a9d8f;
+  color:white;
+}
+#visitWebsiteLink{
+color:#2a9d8f;
+}
+
+

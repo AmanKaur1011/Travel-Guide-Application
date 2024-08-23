@@ -1,0 +1,50 @@
+extends layout
+block layout-content
+    div(class="mb-5  mt-3 rounded-5 container" id="heroContext")
+        // img(src= "/images/heroImage.jpg" class="img-fluid rounded-5 object-fit-fill    ")
+        div(class="position-relative top-50 start-50 translate-middle d-flex  flex-column align-items-center gap-2 ")
+            h1(class="text-white display-1  text-center p-3 rounded  " id="heroTitle") Explore the World with TravelGuide
+            div
+                form(action=`/region` method="get")
+                    label.form-label.text-white.fs-5.fw-light Search for tourist places in any continent
+                    div.container
+                        div.row.justify-content-between
+                            div.col-md-10
+                                input(type="text"  class="form-control " name="region" placeholder="Search by region..")
+                            div.col-md-2   
+                                button(type ="submit" class="btn  btn-block" id="SearchButton" ) Search
+    .container.mb-5.mt-5.pt-5
+        div.row.justify-content-around
+            div.col-md-auto
+                img(src="/images/illustration2.png" alt="an Illustration" aria-hidden="true" class="imag-fluid aboutImage1"  )
+            //- div.col.align-item-end
+            //-     img(src="/images/illustration2.png" alt="" class="imag-fluid aboutImage2"  )
+            div.col-md-8
+                p.aboutp1.fw-semibold.fs-5 - ABOUT
+                h2.fw-semibold.pb-2  We Recommend Beautiful destinations in every country 
+                p.p-0.m-0 let's choose your dream destination 
+                p here we provide many destinations and we offer the best attractions in your country of choice
+                form(method="get" action="/countryName")
+                   
+                        div.row.justify-content-between 
+                            div.col
+                                input(type="text"  class="form-control " name="countryName" placeholder="Search by country..")
+                            div.col.countryButton
+                                button(type ="submit" class="btn" id="CountryButton"  ) Search  
+    div.container
+        h2.text-center.display-5.mb-4  Explore any country   
+        div.container
+            ul.row.countriesList(id="countries-list")
+                each country in countries 
+                    li.col-md-3.mt-2.mb-3
+                        a(href=`/places/${country.country.name.common}`)
+                            div.card.restApiCountries.border-0
+                                img(src= `${country.image}` class="card-img " id="images" alt="country Image" aria-hidden="true")
+                                //img(src=`${country.flags.png}` class="card-img-top opacity-50")
+                                div.card-img-overlay
+                                    p(class="fs-6 bg-white  ps-2 pe-3 py-2 rounded-4 countryName d-inline-block" )
+                                        i(class="fa-solid mb-2 fa-location-dot text-danger  fa-lg ")
+                                        span(class="countries")  &nbsp;#{country.country.name.common}
+    form(action=`/loadMore` method="get").text-center
+        input(type="text"  name="start" value=`${start}`).d-none
+        button( type ="submit" id="loadMore").btn View More           
